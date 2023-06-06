@@ -1,0 +1,28 @@
+h1 {
+    color: #999999;
+    font-family: arial, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    text-align: center;
+    }
+
+#start {
+    width: 100px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: green;
+}
+
+#wordContainer {
+    text-align: center;
+    color: red;
+    font-size: xx-large;
+}
+
+#displayResult {
+    color: red;
+    text-align: center;
+    font-size: xx-large;
+}
