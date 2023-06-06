@@ -47,7 +47,7 @@ function checkWinner() {
 function resetGame() {
     lettersNr = [];
     setRandomWord();
-    document.getElementById("wordContainer").textContent ="";
+    document.getElementById("wordContainer").textContent = "";
     result.textContent = "";
     document.getElementById("numberOfLives").textContent = "";
     livesNumber = 7;
