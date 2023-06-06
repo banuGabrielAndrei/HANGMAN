@@ -4,9 +4,8 @@ let lettersNr = [];
 let livesNumber = 7;
 let result = document.getElementById("displayResult");
 
-function setWord() {
+function setRandomWord() {
      wordIndex = Math.floor(Math.random() * words.length);
-     console.log(words[wordIndex])
 }
 
 function startGame() {
@@ -15,15 +14,14 @@ function startGame() {
         lettersNr[i] = "_";
         document.getElementById("wordContainer").textContent += lettersNr[i] + " ";
     }
-    window.onload;
 }
 
 function checkLetter() {
     let inputLetter = document.getElementById("typedLetter").value;
-    let abc = words[wordIndex];
+    let selectedWord = words[wordIndex];
     found = false;
-    for (let i = 0; i < abc.length; ++i) {
-        if (abc[i] == inputLetter) {
+    for (let i = 0; i < selectedWord.length; ++i) {
+        if (selectedWord[i] == inputLetter) {
             lettersNr[i] = inputLetter;
             found = true;
         } 
@@ -44,16 +42,13 @@ function checkWinner() {
     } else if (lettersNr.join("") == words[wordIndex]) {
         result.textContent = "YOU WON THE GAME!";
     }
-    console.log(lettersNr)
-    console.log(words[wordIndex])
 }
 
 function resetGame() {
     lettersNr = [];
-    setWord();
+    setRandomWord();
     document.getElementById("wordContainer").textContent ="";
     result.textContent = "";
     document.getElementById("numberOfLives").textContent = "";
+    livesNumber = 7;
 }
-
-
